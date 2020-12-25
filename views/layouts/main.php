@@ -37,8 +37,8 @@ AppAsset::register($this);
         'brandLabel' => 'Search listings',
         'brandUrl' => '/',
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
+            'class' => 'navbar-inverse navbar-fixed-top'
+        ]
     ]);
     NavBar::end();
     ?>
