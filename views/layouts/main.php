@@ -23,15 +23,15 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php /*$this->head() ?>
     <?=yii\helpers\Html::cssFile( "@web/css/owl.carousel.css")*/?>
-    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap.min.css")?>
-    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-theme.min.css")?>
-    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-grid.min.css")?>
-    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-utilities.min.css")?>
-    <?=yii\helpers\Html::cssFile( "@web/css/owl.carousel.css")?>
-    <?=yii\helpers\Html::cssFile( "@web/css/site.css")?>
-    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/jquery.js', ["type" => "text/javascript"])?>
-    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/owl.carousel.js', ["type" => "text/javascript"])?>
-    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/main.js', ["type" => "text/javascript"])?>
+    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap.min.css")."\n"?>
+    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-theme.min.css")."\n"?>
+    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-grid.min.css")."\n"?>
+    <?=yii\helpers\Html::cssFile( "@web/css/bootstrap-utilities.min.css")."\n"?>
+    <?=yii\helpers\Html::cssFile( "@web/css/owl.carousel.css")."\n"?>
+    <?=yii\helpers\Html::cssFile( "@web/css/site.css")."\n"?>
+    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/jquery.js', ["type" => "text/javascript"])."\n"?>
+    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/owl.carousel.js', ["type" => "text/javascript"])."\n"?>
+    <?=yii\helpers\Html::jsFile(Yii::$app->request->baseUrl.'/js/main.js', ["type" => "text/javascript"])."\n"?>
 </head>
 <body>
 <?php $this->beginBody() ?>
