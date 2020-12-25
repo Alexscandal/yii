@@ -1,0 +1,353 @@
+html,
+body {
+    height: 100%;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-control {
+     -webkit-appearance: menulist;
+     -moz-appearance: menulist;
+     appearance: menulist;
+     line-height: 19px;
+}
+
+.btn-primary:hover {
+    transition: none;
+    line-height: 20px;
+    padding: 5px .75rem;
+}
+
+.container {
+     max-width: 1170px;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.wrap > .container {
+    padding: 20px 15px;
+}
+
+.navbar {
+     padding: 0;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+}
+
+.navbar-nav > li {
+    float: left;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #9d9d9d;
+    text-decoration: none;
+}
+
+.navbar-nav > li > a {
+    padding: 15px;
+    line-height: 20px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-collapse {
+     width: auto;
+}
+
+.navbar-collapse.collapse {
+     display: block;
+}
+
+.navbar-nav {
+     flex-direction: row;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-right: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.grid .item {
+     border: 1px solid #ccc;
+     margin: 15px 0;
+}
+
+.grid .item .price, .grid .item .desc {
+     padding: 10px;
+     height: 38px;
+}
+
+.grid .item .price {
+     background: #555;
+     color: #fff;
+     font-weight: bold;
+}
+
+.grid .item .image {
+     height: 200px;
+     overflow: hidden;
+     text-align: center;
+}
+
+.grid .item img {
+  height: 100%;
+  width: auto;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.grid .item img:hover {
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #9d9d9d;
+    padding: 15px 0;
+     display: block;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.pagination {
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: -20px;
+  padding-bottom: 30px;
+}
+.pagination > li {
+    display: inline-block;
+}
+.pagination > li > a,
+.pagination > li > span {
+     display: block;
+      position: relative;
+      /*float: left;*/
+      padding: 6px 12px;
+      margin-left: -1px;
+      text-decoration: none;
+      background-color: #fff;
+      border: 1px solid #ddd;
+}
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+        z-index: 2;
+        color: #23527c;
+        background-color: #eeeeee;
+        border-color: #ddd;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+        margin-left: 0;
+        .border-left-radius: 4px;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+        .border-right-radius: 4px;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+      z-index: 3;
+      color: #fff;
+      cursor: default;
+      background-color: #337ab7;
+      border-color: #337ab7;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+      color: #777777;
+      cursor: not-allowed;
+      background-color: #fff;
+      border-color: #ddd;
+}
+
+@media (max-width: 480px) {
+     
+     form .col-3 {
+          width:100%;
+          float: none;
+          margin-bottom: 10px;
+     }
+     
+}
