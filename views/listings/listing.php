@@ -28,4 +28,4 @@ use yii\helpers\VarDumper;
           <p>Baths: <?=$item['room1']?></p>
           <p>Area: <?=number_format($item['prop20'])?> Sq Ft</p>
      </div>
-</div>
+</div>11
