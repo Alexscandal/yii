@@ -45,10 +45,9 @@ class ListingsController extends \yii\web\Controller {
                  ->offset($pagination->offset)
                  ->limit($pagination->limit)
                  ->all();
-             foreach ($items as $key=>$value) {
-               
+          foreach ($items as $key=>$value) {
                $items[$key]['listing_photos']['URLs']=$ListingsModel->get_photo($value['listing_photos']);
-             }
+          }
           Yii::$app->view->title = 'Listings';
           $form=$this->renderPartial('form', ['types'=>$types, 'type'=>$type, 'min'=>$min, 'max'=>$max]);
           return $this->render('index', ['items'=>$items, 'pagination' => $pagination, 'form'=>$form]);
