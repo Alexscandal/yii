@@ -51,7 +51,7 @@ class ListingsController extends \yii\web\Controller {
              }
           Yii::$app->view->title = 'Listings';
           $form=$this->renderPartial('form', ['types'=>$types, 'type'=>$type, 'min'=>$min, 'max'=>$max]);
-             return $this->render('index', ['items'=>$items, 'pagination' => $pagination, 'form'=>$form]);
+          return $this->render('index', ['items'=>$items, 'pagination' => $pagination, 'form'=>$form]);
      }
     
      public function actionListing() {
