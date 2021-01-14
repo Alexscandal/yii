@@ -62,9 +62,9 @@ class ListingsController extends \yii\web\Controller {
                ->from(Listings::tableName() . " l")
                ->joinWith('listing_photos p')
                ->where(['l.list_MLSnum'=>$mls]);
-             $item = $query->one();
-             $item['listing_photos']['URLs']=$ListingsModel->get_photos($item);
-             $item['photo']=$ListingsModel->getPhoto();
+          $item = $query->one();
+          $item['listing_photos']['URLs']=$ListingsModel->get_photos($item);
+          $item['photo']=$ListingsModel->getPhoto();
           Yii::$app->view->title = 'Listing #'.$mls;
           return $this->render('listing', ['item'=>$item]);
      }
