@@ -28,10 +28,10 @@ class ListingsController extends \yii\web\Controller {
                ->leftJoin('listing_photos p', 'l.list_MLSnum=p.list_MLSnum')
                ;
           */
-               $query = Listings::find()
-               ->select('l.list_MLSnum,l.bedrms_total,l.room1,l.prop20,l.list_Price, p.URLs')
-               ->from(Listings::tableName() . " l")
-               ->joinWith('listing_photos p');
+          $query = Listings::find()
+          ->select('l.list_MLSnum,l.bedrms_total,l.room1,l.prop20,l.list_Price, p.URLs')
+          ->from(Listings::tableName() . " l")
+          ->joinWith('listing_photos p');
                if (!empty($type) && key_exists($type,$types)) $query->where(['l.prop_class'=>$type]);
                $query->andFilterWhere(['>=','l.list_Price',$min]);
                $query->andFilterWhere(['<=','l.list_Price',$max]);
