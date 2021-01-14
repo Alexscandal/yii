@@ -56,11 +56,11 @@ class ListingsController extends \yii\web\Controller {
      public function actionListing() {
           $ListingsModel= new Listings();
           $mls = Yii::$app->request->get('mls');
-               $query = Listings::find()
-               ->select('l.*, p.URLs')
-               ->from(Listings::tableName() . " l")
-               ->joinWith('listing_photos p')
-               ->where(['l.list_MLSnum'=>$mls]);
+          $query = Listings::find()
+          ->select('l.*, p.URLs')
+          ->from(Listings::tableName() . " l")
+          ->joinWith('listing_photos p')
+          ->where(['l.list_MLSnum'=>$mls]);
           $item = $query->one();
           $item['listing_photos']['URLs']=$ListingsModel->get_photos($item);
           $item['photo']=$ListingsModel->getPhoto();
