@@ -5,35 +5,36 @@ namespace app\models;
 use yii\db\ActiveRecord;
 use yii\helpers\VarDumper;
 
-class Listings extends \yii\db\ActiveRecord {
+class Listings extends \yii\db\ActiveRecord
+{
      
      const HOST="https://s3.amazonaws.com/media.premiereplusrealty.com/n/";
      private $photo;
-    /*
-    public static function tableName()
-    {
-        return 'listings';
-    }
-    */
-     public function __set($name,$value) {
+
+     public function __set($name,$value)
+     {
           $this[$name] = $value;
      }
      
-     public function getPhoto() {
+     public function getPhoto()
+     {
           return $this['listing_photos']['URLs'];
      }
      
-     public function getListing_photos() {
+     public function getListing_photos()
+     {
           return $this->hasOne(Listing_photos::className(), ['list_MLSnum' => 'list_MLSnum']);
      }
 
-	private function get_source($MLS_NUM) {
+	private function get_source($MLS_NUM)
+     {
 	    $num=substr(substr($MLS_NUM,-2)*3,-2);
 	    if (strlen($num)<2) $num="0".$num;
 	    return $src="http://extimages2.living.net/ImagesHomeProd2/FL/idx/photos/naples/".$num."/";
 	}
 	
-	public function get_photo($data) {
+	public function get_photo($data)
+     {
           $photo="/web/images/nophoto.gif";
           if (isset($data['URLs']) && $data['URLs']!="") {
                $urls=explode(",",$data['URLs']);
@@ -46,7 +47,8 @@ class Listings extends \yii\db\ActiveRecord {
 		return $photo;
 	}
 	
-	public function get_photos($data) {
+	public function get_photos($data)
+     {
           $photos=array("/web/images/nophoto.gif");
           if ($data['listing_photos']['URLs']!="") {
                $photos=[];
@@ -63,17 +65,5 @@ class Listings extends \yii\db\ActiveRecord {
           }
 		return $photos;
 	}
-     
-}
-
-class Listing_photos extends \yii\db\ActiveRecord {
-     /*
-     public function getListings() {
-          return $this->hasOne(Listings::className(), ['list_MLSnum' => 'list_MLSnum']);
-     }
-     */
-}
-
-class Property_type extends \yii\db\ActiveRecord {
      
 }

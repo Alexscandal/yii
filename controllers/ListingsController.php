@@ -3,13 +3,17 @@
 namespace app\controllers;
 
 use Yii;
+use yii\web\Controller;
 use app\models\Listings;
 use app\models\Property_type;
 use yii\data\Pagination;
 use yii\helpers\VarDumper;
 
-class ListingsController extends \yii\web\Controller {
-     public function actionIndex() {
+class ListingsController extends Controller
+{
+     
+     public function actionIndex()
+     {
           $ListingsModel= new Listings();
           $items=Property_type::find()->orderBy('order')->asArray()->all();
           $types=[];
@@ -53,7 +57,8 @@ class ListingsController extends \yii\web\Controller {
           return $this->render('index', ['items'=>$items, 'pagination' => $pagination, 'form'=>$form]);
      }
     
-     public function actionListing() {
+     public function actionListing()
+     {
           $ListingsModel= new Listings();
           $mls = Yii::$app->request->get('mls');
           $query = Listings::find()
